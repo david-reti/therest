@@ -1,24 +1,3 @@
-# README
+# The Rest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the source code for my food blog, The Rest. This project was built in Ruby on Rails version 7, and from a technical perspective, the goal was the build the simplest possible site, without unnecessary elements. From a non-technical perspective, the goal was to build a site where I can write about restaurants which I think are interesting, and possibly unnoticed. I have a unique perspective because of my extensive knowledge of food and cooking. Care was taken to use standard Rails conventions, though of course sometimes concessions were made for clarity. The easiest way to visit the website is by clicking on the link in the sidebar.
