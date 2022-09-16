@@ -1,0 +1,10 @@
+<div class="food-review__preview">
+    <%= fa_icon "star", class: "food-review__preview__icon" %>
+    <p class="food-review__preview__description"><%= food_review.rating&.capitalize %></p>
+
+    <%= fa_icon "dollar", class: "food-review__preview__icon" %>
+    <p class="food-review__preview__description"><%= food_review.price&.capitalize %></p>
+
+    <%= fa_icon "compass", class: "food-review__preview__icon" %>
+    <p class="food-review__preview__description"><%= food_review.city&.name&.capitalize %></p>
+</div>

@@ -1,0 +1,17 @@
+<hr>
+<footer class="footer">
+    <section class="footer__disclaimers">
+        <p> <%= "#{t('messages.copyright')} #{t('messages.copyright_name')}, 2022." %></p>
+        <p> <%= t('messages.not_affiliated') %></p>
+        <p> <%= t('messages.information_processing') %> <%= link_to t('messages.privacy_policy'), privacy_policy_path %>
+            <%= t('messages.cookie_usage') %></p>
+    </section>
+    <section class="footer__links">
+        <ul>
+            <li><%= link_to t('application.top_of_page'), anchor: 'header' %></li>
+            <li><%= link_to t('categories.about'), about_path %></li>
+            <li><%= link_to t('application.privacy'), privacy_policy_path %></li>
+            <li><%= link_to t('application.author_website'), 'https://www.davidreti.net' %></li>
+        <ul>
+    </section>
+</footer>

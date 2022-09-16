@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  article: one
+  city: one
+  cuisine: one
+  rating: 1
+  price: 1
+
+two:
+  article: two
+  city: two
+  cuisine: two
+  rating: 1
+  price: 1

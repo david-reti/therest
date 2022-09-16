@@ -1,0 +1,183 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+body {
+    font-family: serif;
+    margin: 0;
+    background-color: #a1081c;
+}
+
+hr {
+    z-index: 3;
+    position: relative;
+}
+
+.main-container {
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 8px;
+}
+
+.double-line {
+    border-style: double;
+}
+
+.spacer-small {
+    width: 100%;
+    height: 40px;
+}
+
+.link-button {
+    border: 2px solid black;
+    width: 50%;
+    padding: 12px;
+    display: block;
+    margin: 20px auto;    
+    text-align: center;
+    color: purple;
+    text-decoration: none;
+}
+
+.application-message {
+    position: absolute;
+    top: 32px;
+    width: 80%;
+    border: 2px solid black;
+    background-color: white;
+    padding: 12px;
+    left: 10%;
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.notice {
+    border-color: green;
+}
+
+.alert {
+    border-color: red;
+}
+
+.options-menu {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 18pt;
+    font-weight: 700;
+    z-index: 5;
+    padding: 8px;
+    padding-right: 0;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+}
+
+.options-menu--open {
+    display: block;
+    background-color: white;
+    width: 100px;
+}
+
+.options-menu--open .options-menu__links {
+    display: block;
+    margin-top: 0;
+}
+
+.options-menu * {
+    text-decoration: none;
+}
+
+.options-menu__links {
+    background-color: white;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    padding-left: 8px;
+    display: none;
+    width: 100px;
+}
+
+.options-menu__links__option {
+    color: black;
+    font-size: 12pt;
+    width: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown__title {
+    background-color: white;
+    padding-bottom: 16px;
+    z-index: 2;
+}
+
+.dropdown:hover > .dropdown__title {
+    z-index: 4;
+}
+
+.dropdown:hover *, .dropdown__element:hover * {
+    display: flex;
+}
+
+.dropdown__element {
+    display: flex;
+    align-items: center;
+    z-index: 15;
+}
+
+.dropdown__first__element {
+    margin-top: -26px;
+}
+
+.dropdown__element * {
+    padding: 10px;
+    position: relative;
+    display: none;
+    background-color: white;
+    height: 40px;
+    width: 200px;
+}
+
+.dropdown__element:hover * {
+    background-color: lightblue;
+}
+
+.search-message {
+    margin: auto;
+}
+
+.trix-content {
+    margin-left: 130px;
+    margin-top: 12px;
+}
+
+.trix-content * {
+    width: 870px;
+    min-height: 160px;
+    font-size: 14pt;
+    font-weight: 400;
+    letter-spacing: 0.2pt;
+    line-height: 1.8;
+}

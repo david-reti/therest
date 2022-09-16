@@ -1,0 +1,15 @@
+.food-review {
+    border-right: 1px solid black;
+    width: 120px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.food-review div {
+    margin-bottom: 10px;
+}
+
+.food-review div * {
+    display: inline;
+}

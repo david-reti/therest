@@ -1,0 +1,36 @@
+.article__header, .article__colour-block {
+    width: 1000px;
+    height: 300px;
+}
+
+.article__header {
+    position: relative;
+}
+
+.article__cover-image {
+    filter: brightness(50%);
+    z-index: 0;
+} 
+
+.article__header__title {
+    font-size: 38pt;
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    color: white;
+}
+
+.article__subheading {
+    width: 100%;
+}
+
+.article__subheading__item {
+    display: inline-block;
+    color: #303030;
+    width: 50%;
+}
+
+.article__body {
+    display: block;
+    position: relative;
+} 

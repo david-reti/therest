@@ -1,0 +1,20 @@
+<div id="food_review_form" class="<%="hidden" if start_hidden %>">
+    <%= form.fields_for(:food_review, article.food_review || FoodReview.new ) do |review_form| %>
+        <div>
+            <%= review_form.label :City, style: "display: block" %>
+            <%= review_form.select :city_id, City.all.map { |city| [city.name, city.id] }, include_blank: true %>
+        </div>
+        <div>
+            <%= review_form.label :Cuisine, style: "display: block" %>
+            <%= review_form.select :cuisine_id, Cuisine.all.map { |cuisine| [cuisine.name, cuisine.id] }, include_blank: true %>
+        </div>
+        <div>
+            <%= review_form.label :price, style: "display: block" %>
+            <%= review_form.select :price, FoodReview.prices.map { |price| [price[0], price[0]] } %>
+        </div>
+        <div>
+            <%= review_form.label :rating, style: "display: block" %>
+            <%= review_form.select :rating, FoodReview.ratings.map { |rating| [rating[0], rating[0]] } %>
+        </div>
+    <% end %>
+</div>

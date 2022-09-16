@@ -1,0 +1,49 @@
+<%= form_with(model: article) do |form| %>
+  <% if article.errors.any? %>
+    <div style="color: red">
+      <h2><%= "#{pluralize(article.errors.count, "error")} #{t('errors.article_not_saved')}" %></h2>
+
+      <ul>
+        <% article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :cover_image, style: "display: block" %>
+    <%= form.file_field :cover_image %>
+  </div>
+
+  <div>
+    <%= form.label :primary_colour, style: "display: block" %>
+    <%= form.select :primary_colour, @default_colours %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.rich_text_area :body %>
+  </div>
+
+  <div>
+    <%= form.label :exerpt, style: "display: block" %>
+    <%= form.text_field :exerpt %>
+  </div>
+
+  <%= turbo_frame_tag "food_review_frame", data: { controller: "frame" } do %>
+    <%= form.label "Food Review?", for: :article_food_review_select, style: "display: block" %>
+    <%= form.check_box :food_review_select, checked: article.is_food_review?, data: { toToggle: "#food_review_form", action: "change->frame#toggle" } %>
+
+    <%= render 'food_reviews/form', article: article, form: form, start_hidden: !article.is_food_review? %>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

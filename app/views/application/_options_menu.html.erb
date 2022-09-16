@@ -1,0 +1,15 @@
+<div class="options-menu" data-controller="options-menu">
+    ⁝
+    <ul class="options-menu__links">
+        <% menu_options.each do |option, destination| %>
+            <li>
+                <% if destination.is_a? Hash %>
+                    <%= link_to option, destination[:path], class: "options-menu__links__option", 
+                        data: {"turbo-method": destination[:method], "turbo-confirm": destination[:confirm] }.compact %>
+                <% else %>
+                    <%= link_to option, destination, class: "options-menu__links__option" %>
+                <% end %>
+            </li>
+        <% end %>
+    </ul>
+</div>

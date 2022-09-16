@@ -1,0 +1,28 @@
+.index__subheading {
+    display: inline-block;
+    width: 100%;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.index__subheading p {
+    width: 20%;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.index__subheading__left-decoration {
+    text-align: end;
+    font-size: 12pt;
+    transform: scale(-1, 1);
+}
+
+.index__subheading__right-decoration {
+    text-align: end;
+    font-size: 12pt;
+}
+
+.index__subheading__centre-decoration {
+    font-size: 12pt;
+}
+

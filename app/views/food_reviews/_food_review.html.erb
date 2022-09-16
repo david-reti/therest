@@ -1,0 +1,18 @@
+<div class="food-review">
+    <div class="food-review__city">
+        <h4><%= "#{t('application.city')}:" %></h4>
+        <p><%= food_review.city&.name&.capitalize || "Not Indicated" %></p>
+    </div>
+    <div class="food-review__cuisine">
+        <h4><%= "#{t('application.cuisine')}:" %></h4>
+        <p><%= food_review.cuisine&.name&.capitalize || "Not Indicated" %></p>
+    </div>
+    <div class="food-review__price">
+        <h4><%= "#{t('application.price')}:" %></h4>
+        <p><%= food_review.price&.capitalize || "Not Indicated" %></p>
+    </div>
+    <div class="food-review__rating"> 
+        <h4><%= "#{t('application.rating')}:" %></h4>
+        <p><%= food_review.rating&.capitalize || "Not Indicated" %></p>
+    </div> 
+</div>

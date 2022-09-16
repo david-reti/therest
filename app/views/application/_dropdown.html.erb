@@ -1,0 +1,10 @@
+<div class="dropdown">
+    <p class="dropdown__title"><%= elements.first[:name] %></p>
+    <% if elements.length > 1 %>
+        <% elements[1..].each_with_index do |element, index| %>
+            <div class="dropdown__element<%= index == 0 ? " dropdown__first__element" : ""%>">
+                <%= link_to element[:name], element[:destination] %>
+            </div>
+        <% end %>
+    <% end %>
+</div>

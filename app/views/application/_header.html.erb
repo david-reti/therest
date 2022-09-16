@@ -1,0 +1,22 @@
+<header>
+    <nav class="navbar">
+        <h1>
+            <%= link_to root_path do %>
+                <%= inline_svg_tag 'SVGLogo.svg', class: "navbar__logo", width: 300, height: 80 %>
+            <% end %>
+            <% if signed_in? %>
+                <%= link_to t('permissions.signout'), signout_path, class: 'navbar__signin-link' %>
+            <% else %>
+                <%= link_to t('permissions.signin'), signin_path, class: 'navbar__signin-link' %>
+            <% end%>    
+        </h1>
+        <ul class="navbar__links">
+            <li class="navbar__links__item"><%= link_to t('categories.lists'), lists_path %>
+            <li class="navbar__links__item"><%= render 'dropdown', elements: all_cities %>
+            <li class="navbar__links__item"><%= render 'dropdown', elements: all_cuisines %>
+            <li class="navbar__links__item"><%= render 'dropdown', elements: all_ratings %>
+            <li class="navbar__links__item"><%= link_to t('categories.about'), about_path %>
+        </ul>
+    </nav>
+    <hr>
+</header>

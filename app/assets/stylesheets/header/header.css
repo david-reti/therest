@@ -1,0 +1,51 @@
+.navbar {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    max-height: 145px;
+}
+
+.navbar__logo {
+    margin-left: 24px;
+}
+
+.navbar__links {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__links__item {
+    display: inline-block;
+    width: 20%;
+    height: 40px;
+    text-align: center;
+}
+
+.navbar__links__item * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.navbar__links__item a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar__signin-link {
+    float: right;
+    text-decoration: none;
+    font-size: 12pt;
+    color: black;
+    margin-right: 24px;
+}
+
+.navbar__header {
+    display: inline-block;
+    width: 100%;
+}
+
+.navbar__header h1 {
+    width: fit-content;
+}

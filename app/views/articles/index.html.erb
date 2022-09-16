@@ -1,0 +1,26 @@
+<section class="index__subheading">
+  <p class="index__subheading__left-decoration">&#3266;
+  <p class="index__subheading__issue"><%= Time.now.strftime("%B %Y") %>
+  <p class="index__subheading__centre-decoration">•
+  <p class="index__subheading__editor"><%= t('edited_by') %>
+  <p class="index__subheading__right-decoration">&#3266;
+</section>
+<hr class="double-line">
+
+<section id="articles" class="articles">
+  <% if @articles.length > 0 && !@search_criterion.present? %>
+    <%= render 'preview', { article: @articles.first, leading: true } %>
+  <% elsif @articles.length == 0 %>
+    <h4 class="search-message"><%= t('messages.no_matching_articles') %></h4>
+  <% else %>
+    <h4 class="search-message">Showing articles <%= search_preposition(@search_criterion) %>.</h4> 
+  <% end %>
+  <div class="articles__body">
+    <%= render partial: 'preview', collection: @search_criterion ? @articles : @articles[1..],
+                                   as: :article, locals: { leading: false } %>
+  </div>
+</section>
+
+<% if signed_in? && current_user.has_permission_to(:create_article) %>
+  <%= link_to t('application.new_article'), new_article_path, class: 'link-button' %>
+<% end %>

@@ -1,0 +1,20 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+create_article:
+  name: create_article
+edit_own_article: 
+  name: edit_own_article
+edit_all_articles: 
+  name: edit_all_articles
+delete_own_article:
+  name: delete_own_article
+delete_all_articles:
+  name: delete_all_articles
+create_comment:
+  name: create_comment
+edit_own_comment:
+  name: edit_own_comment
+delete_own_comment:
+  name: delete_own_comment
+delete_all_comments:
+  name: delete_all_comments

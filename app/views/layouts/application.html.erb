@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t('application.head_title') %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= favicon_link_tag asset_path("FaviconLogo.jpg") %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>    
+    <% if alert %><p class="application-message alert" data-controller="message"><%= alert %></p><% end %>
+    <% if notice %><p class="application-message notice" data-controller="message"><%= notice %></p><% end %>
+    <div class="main-container">
+      <%= render 'header' %>
+
+      <%= yield %>
+
+      <%= render 'footer' %>
+    </div>
+  </body>
+</html>

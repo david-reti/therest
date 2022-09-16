@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+TestAdmin:
+  name: Test Admin
+  email: admin@example.com
+  password_digest: $2a$12$A3q/fyPv6F3heHRtvVfjYu47L44kDvCDyYrwsRrqzpZUhUgxXZV66
+  biography: This is an admin for testing application functionality
+  role: admin
+
+TestReader:
+  name: Test Reader
+  email: reader@example.com
+  password_digest: $2a$12$A3q/fyPv6F3heHRtvVfjYu47L44kDvCDyYrwsRrqzpZUhUgxXZV66
+  biography: This is a reader user for testing application functionality
+  role: reader

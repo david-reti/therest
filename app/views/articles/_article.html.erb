@@ -1,0 +1,21 @@
+<article id="<%= dom_id article %>" class="article">
+  <div class="article__header">
+    <% if article.cover_image.attached? %>
+      <%= image_tag article.cover_image.variant(resize_to_fill: [1000, 300]), class: "article__cover-image" %>
+    <% else %>
+      <div class="article__colour-block" <%= article_background_colour(article)%>></div>
+    <% end %>
+    <h1 class="article__header__title"><%= article.title %></h1>
+    <%= render 'options_menu', menu_options: article_modify_links(article) if user_permissions_for_article(article) %>
+  </div>
+
+  <div class="article__subheading">
+    <p class="article__subheading__item" style="text-align:start; margin-right:auto"><%= "#{t('application.published')} #{updated_at(article)}" %>
+    <p class="article__subheading__item" style="text-align:end; margin-left:auto"><%= "#{t('application.by')} #{article.user.name}" %>
+  </div>
+
+  <div class="article__body">
+    <%= render article.food_review if article.is_food_review? %>
+    <%= article.body %>
+  </p>
+</article>

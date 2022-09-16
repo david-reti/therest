@@ -1,0 +1,15 @@
+.food-review__preview {
+    display: flex;
+    position: absolute;
+    top: 128px;
+    left: 24px;
+}
+
+.food-review__preview__icon {
+    color: white;
+}
+
+.food-review__preview__description {
+    color: white;
+    margin: 0 8px;
+}
