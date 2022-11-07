@@ -50,13 +50,11 @@ User.create(name: Rails.application.credentials.admin.name,
 
 City.create [
     { name: "Toronto" },
-    { name: "Budapest" },
     { name: "Guelph" }
 ]
 
 Cuisine.create [
-    { name: "Japanese" },
-    { name: "Hungarian" }
+    { name: "Japanese" }
 ]
 
 ENV.delete 'seeding'

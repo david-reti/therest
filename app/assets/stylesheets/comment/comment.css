@@ -1,0 +1,20 @@
+.comment {
+    margin-bottom: 24px;
+}
+
+.comment__header {
+    margin-bottom: 8px;
+}
+
+.comment__header__username {
+    font-weight: 600;
+}
+
+.comment__header__date {
+    font-weight: 200;
+    margin-left: 6px;
+}
+
+.comment__body {
+    padding: 6px;
+}

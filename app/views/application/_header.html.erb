@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar">
         <h1>
-            <%= link_to root_path do %>
+            <%= link_to :root do %>
                 <%= inline_svg_tag 'SVGLogo.svg', class: "navbar__logo", width: 300, height: 80 %>
             <% end %>
             <% if signed_in? %>

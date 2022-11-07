@@ -34,3 +34,8 @@
     display: block;
     position: relative;
 } 
+
+.article__comments {
+    margin-left: 130px;
+    width: 870px;
+}

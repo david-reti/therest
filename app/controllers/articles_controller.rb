@@ -27,14 +27,14 @@ class ArticlesController < ApplicationController
       @article = current_user.articles.new
       @article.food_review = FoodReview.new
     else
-      redirect_to root_path, status: :unauthorized, alert: t('permissions.no_permission')
+      redirect_to :root, status: :unauthorized, alert: t('permissions.no_permission')
     end
   end
 
   # GET /articles/1/edit
   def edit
     return if signin_required?(desired_path: edit_article_path)
-    redirect_to root_path, status: :unauthorized, alert: t('permissions.no_permission') unless current_user.has_permission_to(:edit, @article)
+    redirect_to :root, status: :unauthorized, alert: t('permissions.no_permission') unless current_user.has_permission_to(:edit, @article)
   end
 
   # POST /articles or /articles.json
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
       @article = current_user.articles.new article_params
       respond_to do |format|
         if @article.save
-          format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
+          format.html { redirect_to article_url(@article), notice: t('messages.article_creation_success') }
           format.json { render :show, status: :created, location: @article }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
         end
       end
     else
-      redirect_to root_path, status: :unauthorized, alert: t('permissions.no_permission')
+      redirect_to :root, status: :unauthorized, alert: t('permissions.no_permission')
     end
   end
 
@@ -62,7 +62,7 @@ class ArticlesController < ApplicationController
     if current_user.has_permission_to(:edit, @article)
       respond_to do |format|
         if @article.update(article_params)
-          format.html { redirect_to article_url(@article), notice: "Article was successfully updated." }
+          format.html { redirect_to article_url(@article), notice: t('messages.article_update_success') }
           format.json { render :show, status: :ok, location: @article }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -80,11 +80,11 @@ class ArticlesController < ApplicationController
     if current_user.has_permission_to(:delete, @article)
       @article.destroy
       respond_to do |format|
-        format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
+        format.html { redirect_to articles_url, notice: t('messages.article_destroy_success') }
         format.json { head :no_content }
       end
     else
-      redirect_to root_path, status: :unauthorized, alert: t('permissions.no_permission')
+      redirect_to :root, status: :unauthorized, alert: t('permissions.no_permission')
     end
   end
 

@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
     def destroy
         reset_session
-        redirect_to root_path, notice: t('permissions.signout_success')
+        redirect_to :root, notice: t('permissions.signout_success')
     end
 
     private

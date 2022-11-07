@@ -1,0 +1,23 @@
+<%= form_with(model: user, class: 'form') do |form| %>
+    <% if user.errors.any? %>
+        <p><%= t('errors.could_not_create_account') %>: <%= user.errors.full_messages.join(', ').downcase %></p>
+    <% end %>
+    <div>
+        <%= form.label :name, style: 'display: block' %>
+        <%= form.text_field :name, class: 'form__field' %>
+    </div>
+    <div>
+        <%= form.label :email, style: 'display: block' %>
+        <%= form.text_field :email, class: 'form__field' %>
+    </div>
+    <div>
+        <%= form.label :password, style: 'display: block' %>
+        <%= form.password_field :password, class: 'form__field' %>
+    </div>
+    <div>
+        <%= form.label :password_confirmation, style: 'display: block' %>
+        <%= form.password_field :password_confirmation, class: 'form__field' %>
+    <div>
+        <%= form.submit t('application.submit'), class: 'form__submit' %>
+    </div>
+<% end %>

@@ -1,15 +1,16 @@
-<%= form_with url: session_path do |form| %>
+<%= form_with url: session_path, class: 'form' do |form| %>
     <h1><%=t('permissions.signin')%></h1>
     <%= form.hidden_field :desired_path %>
     <div>
         <%= form.label :email, style: 'display:block' %>
-        <%= form.text_field :email %>
+        <%= form.text_field :email, class: 'form__field' %>
     </div>
     <div>
         <%= form.label :password, style: 'display:block' %>
-        <%= form.password_field :password %>
+        <%= form.password_field :password, class: 'form__field' %>
     </div>
+    <%= link_to "No account? Sign up here", 'users/new' %>
     <div>
-        <%= form.submit t('application.submit') %>
+        <%= form.submit t('application.submit'), class: 'form__submit' %>
     </div>
 <% end %>

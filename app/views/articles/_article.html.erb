@@ -17,5 +17,19 @@
   <div class="article__body">
     <%= render article.food_review if article.is_food_review? %>
     <%= article.body %>
-  </p>
+  </div>
+
+  <div class="article__comments">
+    <h1 class="article__comments__title"><%= t('application.comments') %></h1>
+    <hr>
+    <% if signed_in? && current_user.has_permission_to(:create_comment) %>
+      <%= render 'comments/form', comment: article.comments.new, article: article %>
+      <hr>
+    <% end %>
+    <% if article.comments.present? %>
+      <%= render article.comments %>
+    <% else %>
+      <p>There are no comments to display at this time.</p>
+    <% end %>
+  </div>
 </article>

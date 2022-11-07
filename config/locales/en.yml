@@ -47,14 +47,17 @@ en:
     top_of_page: Top of Page
     privacy: Privacy
     author_website: Author's Website
+    comments: Comments
   permissions:
     signin: Sign In
     signout: Sign Out
+    signup: New Account
     signin_required: You need to be signed in to do this
     no_permission: You don't have permission to do this
     wrong_password: Incorrect email & password combination
     signin_success: Successfully signed in
     signout_success: Successfully signed out
+    account_created: Account Successfuly Created
   categories:
     lists: Lists
     cities: Cities
@@ -63,6 +66,7 @@ en:
     about: About
   errors:
     article_not_saved: "prohibited this article from being saved:"
+    could_not_create_account: Could not create account
   edited_by: Edited By David Reti
   messages:
     no_lists: There are currently no lists to display - they will be added once there are more articles
@@ -74,3 +78,9 @@ en:
     information_processing: By using this website, you agree to the processing of information according to the
     privacy_policy: privacy policy
     cookie_usage: and the usage of cookies.
+    article_creation_success: Article was successfully created.
+    article_update_success: Article was successfully updated.
+    article_destroy_success: Article was successfully destroyed.
+    comment_creation_success: Comment was successfully created. 
+    comment_creation_error: Comment could not be saved because of an error in inputs
+    comment_destroy_success: Comment was successfully destroyed.

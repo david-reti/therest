@@ -1,0 +1,16 @@
+<% if comment.id.present? %>
+  <div id="<%= dom_id comment %>" class="comment">
+    <div class="comment__header">
+      <span class="comment__header__username">
+        <%= comment.user.name %>
+      </span>
+      <span class="comment__header__date">
+        <%= comment.created_at.strftime("%B %d %Y") %>
+      </span>
+    </div>
+
+    <div class="comment__body">
+      <%= comment.message %>
+    </div>
+  </div>
+<% end %>

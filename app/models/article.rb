@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   has_one :food_review
+  has_many :comments
   belongs_to :user
   has_rich_text :body
   has_one_attached :cover_image

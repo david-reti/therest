@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :name, :email, presence: true
   validates :email, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :password, length: { minimum: 8 }, if: :password_digest_changed?
   validates :roles, length: { minimum: 1 }
   
   has_one_attached :profile_picture
