@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
     if current_user.has_permission_to :create_article
       @article = current_user.articles.new
       @article.food_review = FoodReview.new
+      @article.published_at = DateTime.now
     else
       redirect_to :root, status: :unauthorized, alert: t('permissions.no_permission')
     end
@@ -100,7 +101,7 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :cover_image, :primary_colour, :body, :exerpt, :author_id, 
+      params.require(:article).permit(:title, :cover_image, :primary_colour, :body, :exerpt, :author_id, :published_at,
                                       food_review_attributes: [ 
                                         :id, :price, :rating, 
                                         :city_id, :cuisine_id ])

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_19_194929) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_10_223726) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_194929) do
     t.string "exerpt"
     t.string "primary_colour"
     t.string "text_colour"
+    t.datetime "published_at"
     t.index ["food_review_id"], name: "index_articles_on_food_review_id"
     t.index ["title"], name: "index_articles_on_title", unique: true
     t.index ["user_id"], name: "index_articles_on_user_id"

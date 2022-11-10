@@ -1,6 +1,6 @@
 module ApplicationHelper
-    def updated_at(model)
-        model.updated_at.strftime("%B %e %Y")
+    def published_at(model)
+        (model.published_at || model.updated_at).strftime("%B %e %Y")
     end
 
     def all_cities

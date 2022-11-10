@@ -7,7 +7,7 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :food_review
 
-  default_scope -> { order 'updated_at DESC' }
+  default_scope -> { order 'published_at DESC' }
 
   def is_food_review?
     food_review.present?

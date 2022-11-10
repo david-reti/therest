@@ -1,7 +1,7 @@
 <article id="<%= dom_id article %>" class="<%= leading ? 'article--preview--leading' : 'article--preview' %>">
     <%= link_to article do %>
         <h3 class="article__title--preview"><%= article.title %></h3>
-        <p class="article__published_at--preview"><%= updated_at(article) %></p>
+        <p class="article__published_at--preview"><%= published_at(article) %></p>
         <%= render 'food_reviews/preview', food_review: article.food_review if article.is_food_review? %>
         <div id="article__cover-image-container--preview">
             <% if article.cover_image.attached? %>
