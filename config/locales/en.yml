@@ -84,3 +84,21 @@ en:
     comment_creation_success: Comment was successfully created. 
     comment_creation_error: Comment could not be saved because of an error in inputs
     comment_destroy_success: Comment was successfully destroyed.
+  pages:
+    about: >
+      Thank you for finding my web page! On this site, I like to write about one of my favourite hobbies: food and cooking. I have one general philosophy in life, which is that anything one is passionate about, is worth doing well.
+      But it can be difficult to learn the best ways to cook, or places to eat, without a guide of some sort - most of the information on the internet is misinformed and inaccurate, or otherwise without a sense of context. Hence, I 
+      created this page as a way to share my thoughts and insights on the best restaurants to eat at, and recipes to try - for those who are as passionate about food as I am. 
+      <br>
+      <br>
+      I am always open to talk, because I consider this to be a social experience as well - feel free to send me a message by clicking on the link to my website at the bottom of this page - a contact form can be found there.
+    privacy: >
+      The aim of this website is to use the least amount of personal information possible. As this website does not feature advertizing of any kind, no targeting or analytics is carried out, and no specific personal information is needed.
+      In order for this website to work, cookies are used to provide only the most essential functionality - this means the information needed to know which user is logged in, to make comments as well as which page you would like to visit next,
+      which allows for a smoother browsing experience. Your email is not used for any kind of marketing - it is only collected so that you have a way of recovering yout account if needed. Also, your password is encrypted using standard methods,
+      and your data in general are well-protected.
+      <br>
+      <br>
+      The information collected from you is stored for the lifetime of the website, which means you can return to it at any time you would like. However, your account can also be deleted if you would like that.
+      Simply send me a message by visiting my website (see the link at the bottom of this page) and tell me your username or email - I will then remove all your information from the database. 
+     
