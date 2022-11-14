@@ -62,7 +62,14 @@ class ArticlesController < ApplicationController
     return if signin_required?(desired_path: edit_article_path)
     if current_user.has_permission_to(:edit, @article)
       respond_to do |format|
-        if @article.update(article_params)
+        to_update = article_params
+        if to_update[:food_review_select] == "0"
+          to_update.delete :food_review_attributes
+          @article.food_review.destroy if @article.food_review.present? 
+        end
+        to_update.delete :food_review_select
+
+        if @article.update(to_update)
           format.html { redirect_to article_url(@article), notice: t('messages.article_update_success') }
           format.json { render :show, status: :ok, location: @article }
         else
@@ -102,9 +109,9 @@ class ArticlesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :cover_image, :primary_colour, :body, :exerpt, :author_id, :published_at,
-                                      food_review_attributes: [ 
-                                        :id, :price, :rating, 
-                                        :city_id, :cuisine_id ])
+                                                :food_review_select, food_review_attributes: [ 
+                                                :id, :price, :rating, 
+                                                :city_id, :cuisine_id ])
     end
 
     def search_params
