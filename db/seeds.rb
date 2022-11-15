@@ -44,8 +44,8 @@ Role.create [
 
 User.create(name: Rails.application.credentials.admin.name, 
             email: Rails.application.credentials.admin.email,
+            password: Rails.application.credentials.admin.password,
             biography: Rails.application.credentials.admin.biography || "Admin User",
-            password_digest: Rails.application.credentials.admin.password_digest,
             roles: [ Role.find_by(name: 'Admin') ])
 
 City.create [
