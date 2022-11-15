@@ -181,3 +181,14 @@ hr {
     letter-spacing: 0.2pt;
     line-height: 1.8;
 }
+
+.trix-content .attachment__caption {
+    display: none;
+}
+
+.trix-content img {
+    max-width: 100%;
+    max-height: 500px;
+    margin: 24px auto;
+    object-fit: cover;
+}
