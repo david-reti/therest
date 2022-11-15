@@ -43,7 +43,9 @@ class ArticlesController < ApplicationController
     return if signin_required?(desired_path: new_article_path)
     if current_user.has_permission_to :create_article 
       create_params = article_params
+      create_params.delete :food_review_attributes if create_params[:food_review_select] == "0"
       create_params.delete :food_review_select
+      
       @article = current_user.articles.new create_params
       respond_to do |format|
         if @article.save
