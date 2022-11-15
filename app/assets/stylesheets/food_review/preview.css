@@ -3,6 +3,7 @@
     position: absolute;
     top: 128px;
     left: 24px;
+    z-index: 1;
 }
 
 .food-review__preview__icon {
