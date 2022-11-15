@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
     if current_user.has_permission_to :create_article 
       create_params = article_params
       create_params.delete :food_review_select
-      @article = current_user.articles.new 
+      @article = current_user.articles.new create_params
       respond_to do |format|
         if @article.save
           format.html { redirect_to article_url(@article), notice: t('messages.article_creation_success') }
