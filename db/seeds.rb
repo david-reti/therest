@@ -50,10 +50,10 @@ User.create(name: Rails.application.credentials.admin.name,
 
 City.create [
     { name: "Toronto" },
-    { name: "Guelph" }
 ]
 
 Cuisine.create [
+    { name: "International" }
     { name: "Japanese" }
 ]
 

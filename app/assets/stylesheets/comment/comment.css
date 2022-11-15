@@ -18,3 +18,10 @@
 .comment__body {
     padding: 6px;
 }
+
+.comment__input-area {
+    width: 650px;
+    border: 1px solid black;
+    resize: none;
+    margin-top: 6px;
+}
