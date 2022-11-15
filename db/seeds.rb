@@ -53,7 +53,7 @@ City.create [
 ]
 
 Cuisine.create [
-    { name: "International" }
+    { name: "International" },
     { name: "Japanese" }
 ]
 
