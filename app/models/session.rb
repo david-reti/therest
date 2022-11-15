@@ -1,5 +1,5 @@
 class Session < ApplicationRecord
-    include ActiveModel::Base
+    include ActiveModel::Model
 
     validates :email, :password, presence: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
